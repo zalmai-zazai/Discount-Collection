@@ -203,13 +203,13 @@ const Header = () => {
                       </div>
                       <div>
                         <button
-                          onClick={openSignIn}
+                          onClick={() => openSignIn}
                           className="block text-2xs text-dark-4 uppercase"
                         >
                           account
                         </button>
                         <button
-                          onClick={openSignIn}
+                          onClick={() => openSignIn}
                           className="font-medium text-custom-sm text-dark"
                         >
                           Sign In
