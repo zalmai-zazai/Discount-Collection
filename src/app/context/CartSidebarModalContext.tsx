@@ -6,6 +6,7 @@ interface CartModalContextType {
   isCartModalOpen: boolean;
   openCartModal: () => void;
   closeCartModal: () => void;
+  user: ReturnType<typeof useUser>["user"];
 }
 
 const CartModalContext = createContext<CartModalContextType | undefined>(
