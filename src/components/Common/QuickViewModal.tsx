@@ -103,7 +103,7 @@ const QuickViewModal = () => {
                       }`}
                     >
                       <Image
-                        src={img || ""}
+                        src={img || null}
                         alt="thumbnail"
                         width={61}
                         height={61}
@@ -136,13 +136,13 @@ const QuickViewModal = () => {
                         />
                       </svg>
                     </button>
-
+                    {/* 
                     <Image
-                      src={product?.imgs?.previews?.[activePreview]}
+                      src={product?.imgs?.previews?.[activePreview] || null}
                       alt="products-details"
                       width={400}
                       height={400}
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>

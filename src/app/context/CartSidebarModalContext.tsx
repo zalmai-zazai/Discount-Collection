@@ -1,4 +1,5 @@
 "use client";
+import { useUser } from "@clerk/nextjs";
 import React, { createContext, useContext, useState } from "react";
 
 interface CartModalContextType {
@@ -29,10 +30,11 @@ export const CartModalProvider = ({ children }) => {
   const closeCartModal = () => {
     setIsCartModalOpen(false);
   };
-
+  // user object for login
+  const { user } = useUser();
   return (
     <CartModalContext.Provider
-      value={{ isCartModalOpen, openCartModal, closeCartModal }}
+      value={{ user, isCartModalOpen, openCartModal, closeCartModal }}
     >
       {children}
     </CartModalContext.Provider>
